@@ -1,0 +1,24 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+
+        checkWheteryear(year);
+    }
+
+    public static void checkWheteryear(int year)
+    {
+        if(year % 4 == 0)
+        {
+            System.out.println("wheter a year");
+        }
+        else
+            System.out.println("year are not whether");
+    }
+
+}
