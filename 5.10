@@ -19,6 +19,7 @@ public class Main {
             System.out.println("704 Error");
         }
     }
+    
     public static int CalculateArea(int side1, int side2, int side3, int perimetr){
         int area = (int) Math.sqrt( perimetr * (perimetr - side1) * ( perimetr - side2 ) * ( perimetr - side3 ) );
         return area;
@@ -29,6 +30,7 @@ public class Main {
         int perimetr = sides1 + sides2 + sides3;
         return perimetr;
     }
+    
     public static void printPerimetrAndArea(int perimetr, int area)
     {
         System.out.println("Perimetr = " + perimetr);
