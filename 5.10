@@ -13,7 +13,10 @@ public class Main {
         if(checkSidesTriangle(sides1, sides2, sides3) == 1){
            int perimetr = CalculatePerimetr(sides1,sides2,sides3);
            int area = CalculateArea(sides1, sides2, sides3, perimetr);
-
+           printPerimetrAndArea(perimetr, area);
+        }
+        else {
+            System.out.println("704 Error");
         }
     }
     public static int CalculateArea(int side1, int side2, int side3, int perimetr){
@@ -26,11 +29,16 @@ public class Main {
         int perimetr = sides1 + sides2 + sides3;
         return perimetr;
     }
+    public static void printPerimetrAndArea(int perimetr, int area)
+    {
+        System.out.println("Perimetr = " + perimetr);
+        System.out.println("Area = " + area);
+    }
 
     public static int checkSidesTriangle(int sides1,int sides2, int sides3)
     {
         int count = 0;
-        if((sides1 < sides2 + sides3) && (sides2 < sides1 + sides3)&& (sides3 < sides1 + sides2))
+        if((sides1 < sides2 + sides3) && (sides2 < sides1 + sides3) && (sides3 < sides1 + sides2))
         {
             count++;
         }
