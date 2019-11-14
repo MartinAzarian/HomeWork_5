@@ -1,0 +1,37 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        int num1 = scan.nextInt();
+        System.out.println(num1);
+
+        int num2 = scan.nextInt();
+        System.out.println(num2);
+
+        int num3 = scan.nextInt();
+        System.out.println(num3);
+        
+        System.out.println("Small is " + minimumAmongNumbers(num1,num2,num3));
+
+
+    }
+    public static int minimumAmongNumbers(int num1, int num2, int num3){
+        int minimum = num1;
+        if(num1 > num2)
+        {
+            num2 = minimum;
+        }
+        if(minimum > num3)
+        {
+            minimum = num3;
+        }
+        return minimum;
+    }
+}
