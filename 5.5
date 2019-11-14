@@ -1,0 +1,23 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.next();
+        
+        printMiddleCharacter(inputString);
+        
+    }
+    
+    public static void printMiddleCharacter(String inputString)
+    {
+        int lenght = inputString.length();
+        int i = lenght/2;
+        System.out.println(inputString.charAt(i));
+    } 
+}
