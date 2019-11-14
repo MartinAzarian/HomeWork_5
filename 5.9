@@ -1,0 +1,27 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        double radius = scan.nextDouble();
+
+        System.out.println(calculatePerimetr(radius));
+
+        System.out.println(area(radius));
+
+    }
+    public  static double calculatePerimetr(double radius)
+    {
+        double pi=3.14;
+        double c = 2*pi*radius;
+        return c;
+    }
+    public static double area(double  radius){
+        double pi = 3.14;
+        double plosh = pi * ( radius * radius );
+        return plosh;
+    }
+}
