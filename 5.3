@@ -1,0 +1,37 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        int num1 = scan.nextInt();
+        System.out.println ("Number1= " + num1);
+        int num2 = scan.nextInt();
+        System.out.println ("Number2= " + num2);
+
+        int productNum1Num2 = productNum1Num2 (num1, num2);
+        System.out.println("num1 * num2 = " + productNum1Num2);
+        
+        cubeProductNum2(productNum1Num2);
+        System.out.println("( num1 * num2 ) ^ 3 = " + cubeProductNum2(productNum1Num2));
+
+    }
+    public static int productNum1Num2(int num1, int num2){
+        int productnum1num2 = num1 * num2;
+        return productnum1num2;
+    }
+    
+    
+    public static int cubeProductNum2(int cubeProducteNum1Num2)
+    {
+        int cube = cubeProducteNum1Num2 * cubeProducteNum1Num2 * cubeProducteNum1Num2;
+        
+        return cube;
+    }
+    
+}
