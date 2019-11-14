@@ -1,0 +1,39 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sides1 = scanner.nextInt();
+        int sides2 = scanner.nextInt();
+        int sides3 = scanner.nextInt();
+
+
+        if(checkSidesTriangle(sides1, sides2, sides3) == 1){
+           int perimetr = CalculatePerimetr(sides1,sides2,sides3);
+           int area = CalculateArea(sides1, sides2, sides3, perimetr);
+
+        }
+    }
+    public static int CalculateArea(int side1, int side2, int side3, int perimetr){
+        int area = (int) Math.sqrt( perimetr * (perimetr - side1) * ( perimetr - side2 ) * ( perimetr - side3 ) );
+        return area;
+    }
+
+    public  static int CalculatePerimetr(int sides1, int sides2, int sides3)
+    {
+        int perimetr = sides1 + sides2 + sides3;
+        return perimetr;
+    }
+
+    public static int checkSidesTriangle(int sides1,int sides2, int sides3)
+    {
+        int count = 0;
+        if((sides1 < sides2 + sides3) && (sides2 < sides1 + sides3)&& (sides3 < sides1 + sides2))
+        {
+            count++;
+        }
+        return count;
+    }
+}
