@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        int digit = scan.nextInt ();
+       System.out.println( calculateFactorial (digit) );
+    }
+
+    public static int calculateFactorial(int digit) {
+        int factorial = 1;
+        while (digit > 0) {
+            factorial *= digit;
+            digit--;
+            calculateFactorial (digit);
+        }
+        return factorial;
+    }
+}
