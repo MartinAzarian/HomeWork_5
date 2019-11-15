@@ -1,0 +1,31 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        printPrimeNumber();
+
+    }
+    public static void printPrimeNumber()
+    {
+        int input = 100;
+        boolean b = true;
+        for (int P = 2; P <= input; P++) {
+            
+            for (int i = 2; i < P; i++) {
+                
+                if (P % i == 0) {
+                    
+                    b = false;
+                    break;
+                    
+                }
+                
+            }
+            if (b) System.out.println(P);
+            else b = true;
+        }
+    }
+}
